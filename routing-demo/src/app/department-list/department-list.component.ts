@@ -5,7 +5,7 @@ import { Router, ActivatedRoute, ParamMap} from '@angular/router';
   selector: 'app-department-list',
   template: `
     <h3>
-      Department List
+      Select List
     </h3>
     <ul class="items">
       <li *ngFor="let department of departments" [class.selected]="isSelected(department)" (click)="onSelect(department)">
@@ -19,11 +19,9 @@ export class DepartmentListComponent implements OnInit {
   
   public selectedId;
   departments = [
-    {"id": 1, "name": "Angular"},
-    {"id": 2, "name": "Node"},
-    {"id": 3, "name": "MongoDB"},
-    {"id": 4, "name": "Ruby"},
-    {"id": 5, "name": "Bootstrap"}
+    {"id": 1, "name": "Keyboards"},
+    {"id": 2, "name": "Mouses"},
+ 
   ]
   constructor(private router: Router, private route: ActivatedRoute) { }
 
